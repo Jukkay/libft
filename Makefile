@@ -6,7 +6,7 @@
 #    By: jylimaul <jylimaul@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/29 16:28:15 by jylimaul          #+#    #+#              #
-#    Updated: 2021/11/18 12:07:28 by jylimaul         ###   ########.fr        #
+#    Updated: 2021/11/18 13:54:03 by jylimaul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,10 +31,10 @@ FLAGS = -c -Wall -Wextra -Werror
 
 .PHONY: all clean fclean re name
 
-all: ${NAME}
+all: $(NAME)
 
-${NAME}: ${HEADERS}
-	ar rc ${NAME} ${HEADERS}
+$(NAME): ${HEADERS}
+	ar rc $(NAME) ${HEADERS}
 
 ft_memset.o:
 	gcc ${FLAGS} ft_memset.c
@@ -229,7 +229,7 @@ clean:
 	rm -f ${HEADERS}
 
 fclean: clean
-	rm -f ${T_LIB} ${NAME}
+	rm -f ${T_LIB} $(NAME)
 
 re: fclean all
 
