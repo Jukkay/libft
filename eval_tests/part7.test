@@ -1,0 +1,6 @@
+./ft_lstnew | cat -e
+./ft_lstdelone | cat -e
+./ft_lstdel | cat -e
+./ft_lstadd | cat -e
+./ft_lstiter | cat -e
+./ft_lstmap | cat -e

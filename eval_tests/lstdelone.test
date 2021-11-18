@@ -1,0 +1,53 @@
+#include "../libft.h"
+#include <stdio.h>
+
+
+void	ft_lstprint(t_list *lst)
+{
+	if (!lst)
+		return ;
+	while (lst)
+	{
+		ft_putchar(*((char *)(lst->content)));
+		ft_putchar('	');
+		ft_putnbr(lst->content_size);
+		ft_putchar('\n');
+		lst = lst->next;
+	}
+}
+
+void	ft_lstfree(void *content, size_t content_size)
+{
+	if (!content)
+		return ;
+	free(content);
+	content_size = 0;
+}
+
+int	main(void)
+{
+	t_list	*head;
+	char	c;
+
+
+	write(1, "\n------------------ FT_LSTDELONE ------------------\n\n", 53);
+	c = 'A';
+
+	head = ft_lstnew(&c, sizeof(char));
+	write(1, "head before:\n", 13);
+	ft_lstprint(head);
+	ft_lstdelone(&head, &ft_lstfree);
+	write(1, "head after:\n", 12);
+	ft_lstprint(head);
+
+	c = '9';
+
+	head = ft_lstnew(&c, sizeof(char));
+	write(1, "head before:\n", 13);
+	ft_lstprint(head);
+	ft_lstdelone(&head, &ft_lstfree);
+	write(1, "head after:\n", 12);
+	ft_lstprint(head);
+
+	return (0);
+}

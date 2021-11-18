@@ -1,0 +1,108 @@
+
+#include "../libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	char	s1[] = "testing";
+	char	s2[] = "testing";
+	char	src[] = "1234567";
+	char	*str1;
+	char	*str2;
+	char	c;
+	size_t	len;
+	
+	
+	write(1, "\n------------------ FT_MEMCCPY ------------------\n\n", 51);
+	printf("ft_memccpy dst: %s\n", s1);
+	printf("memccpy dst:    %s\n", s1);
+	printf("scr:            %s\n", src);
+	printf("--------------\n");
+
+	c = '1';
+	len = 7;
+	printf("c:          %c\n", c);
+	printf("len:        %zu\n", len);
+	str1 = ft_memccpy(s1, src, c, len);
+	printf("ft_memccpy: %s\n", str1);
+	printf("dst1:       %s\n", s1);
+	str2 = memccpy(s2, src, c, len);
+	printf("memccpy:    %s\n", str2);
+	printf("dst2:       %s\n", s2);
+	printf("--------------\n");
+
+	c = '2';
+	len = 7;
+	printf("c:          %c\n", c);
+	printf("len:        %zu\n", len);
+	str1 = ft_memccpy(s1, src, c, len);
+	printf("ft_memccpy: %s\n", str1);
+	printf("dst1:       %s\n", s1);
+	str2 = memccpy(s2, src, c, len);
+	printf("memccpy:    %s\n", str2);
+	printf("dst2:       %s\n", s2);
+	printf("--------------\n");
+	
+	c = '3';
+	len = 7;
+	printf("c:          %c\n", c);
+	printf("len:        %zu\n", len);
+	str1 = ft_memccpy(s1, src, c, len);
+	printf("ft_memccpy: %s\n", str1);
+	printf("dst1:       %s\n", s1);
+	str2 = memccpy(s2, src, c, len);
+	printf("memccpy:    %s\n", str2);
+	printf("dst2:       %s\n", s2);
+	printf("--------------\n");
+
+	c = '4';
+	len = 7;
+	printf("c:          %c\n", c);
+	printf("len:        %zu\n", len);
+	str1 = ft_memccpy(s1, src, c, len);
+	printf("ft_memccpy: %s\n", str1);
+	printf("dst1:       %s\n", s1);
+	str2 = memccpy(s2, src, c, len);
+	printf("memccpy:    %s\n", str2);
+	printf("dst2:       %s\n", s2);
+	printf("--------------\n");
+
+	c = '5';
+	len = 7;
+	printf("c:          %c\n", c);
+	printf("len:        %zu\n", len);
+	str1 = ft_memccpy(s1, src, c, len);
+	printf("ft_memccpy: %s\n", str1);
+	printf("dst1:       %s\n", s1);
+	str2 = memccpy(s2, src, c, len);
+	printf("memccpy:    %s\n", str2);
+	printf("dst2:       %s\n", s2);
+	printf("--------------\n");
+	return (0);
+	
+	c = '6';
+	len = 7;
+	printf("c:          %c\n", c);
+	printf("len:        %zu\n", len);
+	str1 = ft_memccpy(s1, src, c, len);
+	printf("ft_memccpy: %s\n", str1);
+	printf("dst1:       %s\n", s1);
+	str2 = memccpy(s2, src, c, len);
+	printf("memccpy:    %s\n", str2);
+	printf("dst2:       %s\n", s2);
+	printf("--------------\n");
+	return (0);
+
+	c = '7';
+	len = 7;
+	printf("c:          %c\n", c);
+	printf("len:        %zu\n", len);
+	str1 = ft_memccpy(s1, src, c, len);
+	printf("ft_memccpy: %s\n", str1);
+	printf("dst1:       %s\n", s1);
+	str2 = memccpy(s2, src, c, len);
+	printf("memccpy:    %s\n", str2);
+	printf("dst2:       %s\n", s2);
+	printf("--------------\n");
+	return (0);
+}

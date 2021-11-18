@@ -1,0 +1,71 @@
+#include "../libft.h"
+#include <stdio.h>
+
+t_list	*ft_create_char_lst(char start, char end, size_t increment)
+{
+	t_list	*head;
+	t_list	*new;
+	t_list	*temp;
+
+	if (end <= start || !end || !start || !increment)
+		return (NULL);
+	head = ft_lstnew(&start, sizeof(char));
+	if (!head)
+		return (NULL);
+	temp = head;
+	while (start < end)
+	{
+		start += (int)increment;
+		if (start > end)
+			break ;
+		new = ft_lstnew(&start, sizeof(char));
+		if (!new)
+			return (NULL);
+		temp->next = new;
+		temp = temp->next;
+	}
+	return (head);
+}
+
+void	ft_lstzero(t_list *elem)
+{
+	char	c;
+
+	c = '0';
+	ft_memmove(elem->content, &c, sizeof(c));
+}
+
+void	ft_lstprint(t_list *lst)
+{
+	if (!lst)
+		return ;
+	while (lst)
+	{
+		ft_putchar(*((char *)(lst->content)));
+		ft_putchar('	');
+		ft_putnbr(lst->content_size);
+		ft_putchar('\n');
+		lst = lst->next;
+	}
+}
+
+int	main(void)
+{
+	t_list	*head;
+	char	i;
+	char	n;
+	
+	write(1, "\n------------------ FT_LSTITER ------------------\n\n", 51);
+
+	i = 'a';
+	n = 'z';
+
+	head = ft_create_char_lst(i, n, 1);
+	write(1, "Before ft_lstiter:\n\n", 20);
+	ft_lstprint(head);
+	ft_lstiter(head, &ft_lstzero);
+	write(1, "After ft_lstiter:\n\n", 19);
+	ft_lstprint(head);
+
+	return (0);
+}

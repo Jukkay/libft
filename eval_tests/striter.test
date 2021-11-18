@@ -1,0 +1,18 @@
+
+#include <stdio.h>
+#include "../libft.h"
+
+void	ft_oneforward(char *s)
+{
+	++(s[0]);
+}
+
+int	main(void)
+{
+	char	s[] = "aaaaaaa";
+	write(1, "\n------------------ FT_STRITER ------------------\n\n", 51);
+	printf("Original string: %s\n", s);
+	ft_striter(s, &ft_oneforward);
+	printf("Modified string: %s\n", s);
+	return (0);
+}

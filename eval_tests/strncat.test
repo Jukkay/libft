@@ -1,0 +1,49 @@
+
+#include "../libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	char	s1[20] = "abcd";
+	char	s2[20] = "abcd";
+	char	*str;
+	size_t	n;
+
+	write(1, "\n------------------ FT_STRNCAT ------------------\n\n", 51);
+	n = 0;
+	str = strncat(s2, "1234", n);
+	printf("strncat:    %s\n", str);
+	str = ft_strncat(s1, "1234", n);
+	printf("ft_strncat: %s\n", str);
+	printf("n: %zu\n", n);
+
+	n = 1;
+	str = strncat(s2, "1234", n);
+	printf("strncat:    %s\n", str);
+	str = ft_strncat(s1, "1234", n);
+	printf("ft_strncat: %s\n", str);
+	printf("n: %zu\n", n);
+
+	n = 2;
+	str = strncat(s2, "1234", n);
+	printf("strncat:    %s\n", str);
+	str = ft_strncat(s1, "1234", n);
+	printf("ft_strncat: %s\n", str);
+	printf("n: %zu\n", n);
+
+	n = 3;
+	str = strncat(s2, "1234", n);
+	printf("strncat:    %s\n", str);
+	str = ft_strncat(s1, "1234", n);
+	printf("ft_strncat: %s\n", str);
+	printf("n: %zu\n", n);
+
+	n = 4;
+	str = strncat(s2, "1234", n);
+	printf("strncat:    %s\n", str);
+	str = ft_strncat(s1, "1234", n);
+	printf("ft_strncat: %s\n", str);
+	printf("n: %zu\n", n);
+
+	return (0);
+}

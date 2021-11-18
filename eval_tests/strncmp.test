@@ -1,0 +1,36 @@
+
+#include "../libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	int		diff;
+	size_t	len;
+	
+	diff = 0;
+	len = 134;
+	
+	
+	write(1, "\n------------------ FT_STRNCMP ------------------\n\n", 51);
+	diff = ft_strncmp(" asdf", "asdf ", len);
+	printf("ft_strncmp: %d\n", diff);
+	diff = strncmp(" asdf", "asdf ", len);
+	printf("strncmp:    %d\n", diff);
+	
+	diff = ft_strncmp("aaa", "aaaa", len);
+	printf("ft_strncmp: %d\n", diff);
+	diff = strncmp("aaa", "aaaa", len);
+	printf("strncmp:    %d\n", diff);
+	
+	diff = ft_strncmp("bbbb", "aaaa", len);
+	printf("ft_strncmp: %d\n", diff);
+	diff = strncmp("bbbb", "aaaa", len);
+	printf("strncmp:    %d\n", diff);
+
+	diff = ft_strncmp("bbbbaaa", "bbaaaa", len);
+	printf("ft_strncmp: %d\n", diff);
+	diff = strncmp("bbbbaaa", "bbaaaa", len);
+	printf("strncmp:    %d\n", diff);
+
+	return (0);
+}

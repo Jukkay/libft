@@ -1,0 +1,42 @@
+
+#include "../libft.h"
+#include <stdio.h>
+#include <ctype.h>
+
+int	main(void)
+{
+	int	n;
+
+	write(1, "\n------------------ FT_ISALNUM ------------------\n\n", 51);
+	n = ft_isalnum('0');
+	printf("ft_isalnum: %d\n", n);
+	n = isalnum('0');
+	printf("isalnum:    %d\n", n);
+
+	n = ft_isalnum('9');
+	printf("ft_isalnum: %d\n", n);
+	n = isalnum('9');
+	printf("isalnum:    %d\n", n);
+
+	n = ft_isalnum('a');
+	printf("ft_isalnum: %d\n", n);
+	n = isalnum('a');
+	printf("isalnum:    %d\n", n);
+
+	n = ft_isalnum('D');
+	printf("ft_isalnum: %d\n", n);
+	n = isalnum('D');
+	printf("isalnum:    %d\n", n);
+
+	n = ft_isalnum('*');
+	printf("ft_isalnum: %d\n", n);
+	n = isalnum('*');
+	printf("isalnum:    %d\n", n);
+
+	n = ft_isalnum('/');
+	printf("ft_isalnum: %d\n", n);
+	n = isalnum('/');
+	printf("isalnum:    %d\n", n);
+
+	return (0);
+}

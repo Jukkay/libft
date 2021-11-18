@@ -1,0 +1,37 @@
+
+#include <stdio.h>
+#include "../libft.h"
+
+int	main(void)
+{
+	void	*mem;
+	size_t	size;
+	size_t	i;
+	size_t	test;
+
+	size = 10;
+	i = 0;
+	test = 1;
+	write(1, "\n------------------ FT_MEMALLOC ------------------\n\n", 52);
+	
+	mem = &test;
+	printf("Size of memory to be allocated: %zu\n", size);
+	printf("pointer before memalloc: %p\n", mem);
+	mem = ft_memalloc(size);
+	if (!mem)
+	{
+		write(1, "Memory not allocated.\n", 22);
+		return (0);
+	}
+	printf("pointer after memalloc: %p\n", mem);
+	printf("Memory content within allocated bytes:\n");
+	while (i < size)
+	{
+		printf("%d\n", *((int *)mem));
+		mem++;
+		i++;
+	}
+	mem -= i;
+	free(mem);
+	return (0);
+}

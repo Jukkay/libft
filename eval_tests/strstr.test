@@ -1,0 +1,21 @@
+
+#include "../libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	char	*ret;
+
+	write(1, "\n------------------ FT_STRSTR ------------------\n\n", 50);
+	ret = ft_strstr("asdnskdlkskadxpasfjaskf", "x");
+	printf("ft_strstr: %s\n", ret);
+	ret = strstr("asdnskdlkskadxpasfjaskf", "x");
+	printf("strstr:    %s\n", ret);
+
+	ret = ft_strstr("MZIRIBMZIRIBMZP", "MZIRIBMZP");
+	printf("ft_strstr: %s\n", ret);
+	ret = strstr("MZIRIBMZIRIBMZP", "MZIRIBMZP");
+	printf("strstr:    %s\n", ret);
+
+	return (0);
+}

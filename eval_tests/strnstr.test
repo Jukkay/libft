@@ -1,0 +1,49 @@
+
+#include "../libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	char	*ret;
+	size_t	len;
+
+	write(1, "\n------------------ FT_STRNSTR ------------------\n\n", 51);
+	
+	len = 4;
+	ret = ft_strnstr("abcd", "c", len);
+	printf("ft_strnstr: %s\n", ret);
+	ret = strnstr("abcd", "c", len);
+	printf("strnstr:    %s\n", ret);
+
+	len = 18;
+	ret = ft_strnstr("abcabcdabcdeabcdef", "abcde", len);
+	printf("ft_strnstr: %s\n", ret);
+	ret = strnstr("abcabcdabcdeabcdef", "abcde", len);
+	printf("strnstr:    %s\n", ret);
+
+	len = 0;
+	ret = ft_strnstr("abcabcdabcdeabcdef", "abcde", len);
+	printf("ft_strnstr: %s\n", ret);
+	ret = strnstr("abcabcdabcdeabcdef", "abcde", len);
+	printf("strnstr:    %s\n", ret);
+
+	len = 18;
+	ret = ft_strnstr("", "abcde", len);
+	printf("ft_strnstr: %s\n", ret);
+	ret = strnstr("", "abcde", len);
+	printf("strnstr:    %s\n", ret);
+
+	len = 18;
+	ret = ft_strnstr("abcabcdabcdeabcdef", "", len);
+	printf("ft_strnstr: %s\n", ret);
+	ret = strnstr("abcabcdabcdeabcdef", "", len);
+	printf("strnstr:    %s\n", ret);
+
+
+	len = 20;
+	ret = ft_strnstr("asdnskxdlkskxpadxpasfjaskfafasf", "xpas", len);
+	printf("ft_strnstr: %s\n", ret);
+	ret = strnstr("asdnskxdlkskxpadxpasfjaskfafasf", "xpas", len);
+	printf("strnstr:    %s\n", ret);
+	return (0);
+}

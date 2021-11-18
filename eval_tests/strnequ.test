@@ -1,0 +1,53 @@
+
+#include <stdio.h>
+#include "../libft.h"
+
+int	main(void)
+{
+	int	diff;
+	
+	write(1, "\n------------------ FT_STRNEQU ------------------\n\n", 51);
+	diff = ft_strnequ("asdff", "asdfafaf", 5);
+	if(!diff)
+		write(1, "OK\n", 3);
+	else
+		write(1, "FAIL\n", 5);
+
+	diff = ft_strnequ("aaabbbdf", "aaaa", 3);
+	if(diff)
+		write(1, "OK\n", 3);
+	else
+		write(1, "FAIL\n", 5);
+	
+	diff = ft_strnequ("bbbbb", "bbbbaaasff", 4);
+	if(diff)
+		write(1, "OK\n", 3);
+	else
+		write(1, "FAIL\n", 5);
+	
+	diff = ft_strnequ("bbbb", "aaaa", 4);
+	if(!diff)
+		write(1, "OK\n", 3);
+	else
+		write(1, "FAIL\n", 5);
+	
+	diff = ft_strnequ("aAa", "aAaa", 4);
+	if(!diff)
+		write(1, "OK\n", 3);
+	else
+		write(1, "FAIL\n", 5);
+	
+	diff = ft_strnequ("ededeqdf", "", 0);
+	if(diff)
+		write(1, "OK\n", 3);
+	else
+		write(1, "FAIL\n", 5);
+	
+	diff = ft_strnequ("", "ededeqdf", 0);
+	if(diff)
+		write(1, "OK\n", 3);
+	else
+		write(1, "FAIL\n", 5);
+
+	return (0);
+}

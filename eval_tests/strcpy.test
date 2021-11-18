@@ -1,0 +1,18 @@
+
+#include <stdio.h>
+#include "../libft.h"
+
+int	main(void)
+{
+	char	*diff;
+	char	dst[] = "testtest";
+	char	src[] = "xxxx";
+	
+	write(1, "\n------------------ FT_STRCPY ------------------\n\n", 50);
+	diff = ft_strcpy(dst, src);
+	printf("ft_strcpy:	%s\n", diff);
+	diff = strcpy(dst, src);
+	printf("strcpy:		%s\n", diff);
+	
+	return (0);
+}

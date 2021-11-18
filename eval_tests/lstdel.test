@@ -1,0 +1,80 @@
+#include "../libft.h"
+#include <stdio.h>
+
+t_list	*ft_create_char_lst(char start, char end, size_t increment)
+{
+	t_list	*head;
+	t_list	*new;
+	t_list	*temp;
+
+	if (end <= start || !end || !start || !increment)
+		return (NULL);
+	head = ft_lstnew(&start, sizeof(char));
+	if (!head)
+		return (NULL);
+	temp = head;
+	while (start < end)
+	{
+		start += (int)increment;
+		if (start > end)
+			break ;
+		new = ft_lstnew(&start, sizeof(char));
+		if (!new)
+			return (NULL);
+		temp->next = new;
+		temp = temp->next;
+	}
+	return (head);
+}
+
+void	ft_lstprint(t_list *lst)
+{
+	if (!lst)
+		return ;
+	while (lst)
+	{
+		ft_putchar(*((char *)(lst->content)));
+		ft_putchar('	');
+		ft_putnbr(lst->content_size);
+		ft_putchar('\n');
+		lst = lst->next;
+	}
+}
+
+void	ft_lstfree(void *content, size_t content_size)
+{
+	if (!content)
+		return ;
+	free(content);
+	content_size = 0;
+}
+
+
+int	main(void)
+{
+	t_list	*head;
+	char	start;
+	char	end;
+
+
+	write(1, "\n------------------ FT_LSTDEL ------------------\n\n", 50);
+	start = 'A';
+	end = 'Z';
+	head = ft_create_char_lst(start, end, 1);
+	write(1, "head before:\n", 13);
+	ft_lstprint(head);
+	ft_lstdel(&head, &ft_lstfree);
+	write(1, "head after:\n", 12);
+	ft_lstprint(head);
+
+	start = '0';
+	end = '9';
+	head = ft_create_char_lst(start, end, 1);
+	write(1, "head before:\n", 13);
+	ft_lstprint(head);
+	ft_lstdel(&head, &ft_lstfree);
+	write(1, "head after:\n", 12);
+	ft_lstprint(head);
+
+	return (0);
+}

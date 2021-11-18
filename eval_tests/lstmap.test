@@ -1,0 +1,57 @@
+
+#include "../libft.h"
+#include <stdio.h>
+
+static t_list	*ft_lstzeroret(t_list *elem)
+{
+	t_list	*new;
+
+	new = ft_lstnew(elem->content, sizeof(char));
+	ft_memcpy(new->content, "0", 1);
+	return(new);
+}
+
+void	ft_lstprint(t_list *lst)
+{
+	if (!lst)
+		return ;
+	while (lst)
+	{
+		ft_putchar(*((char *)(lst->content)));
+		ft_putchar('	');
+		ft_putnbr(lst->content_size);
+		ft_putchar('\n');
+		lst = lst->next;
+	}
+}
+
+int	main(void)
+{
+	t_list	*new;
+	t_list	*head;
+	t_list	*ret;
+	char	i;
+	char	n;
+	
+	write(1, "\n------------------ FT_LSTMAP ------------------\n\n", 50);
+
+	i = 'a';
+	n = 'z';
+	
+	new = ft_lstnew(&i, sizeof(char));
+	head = new;
+	ret = new;
+	while (++i <= n)
+	{		
+		new->next = ft_lstnew(&i, sizeof(char));
+		new = new->next;
+	}
+	write(1, "Before ft_lstmap:\n", 18);
+	ft_lstprint(head);
+	i = 'a';
+	ret = ft_lstmap(head, &ft_lstzeroret);
+	write(1, "After ft_lstmap:\n", 17);
+	ft_lstprint(ret);
+
+	return (0);
+}

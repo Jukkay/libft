@@ -1,0 +1,62 @@
+
+#include "../libft.h"
+#include <stdio.h>
+#include <ctype.h>
+
+int	main(void)
+{
+	int	n;
+
+	write(1, "\n------------------ FT_TOUPPER ------------------\n\n", 51);
+	n = ft_toupper('a');
+	printf("ft_toupper: %c\n", n);
+	n = toupper('a');
+	printf("toupper:    %c\n", n);
+
+	n = ft_toupper('9');
+	printf("ft_toupper: %c\n", n);
+	n = toupper('9');
+	printf("toupper:    %c\n", n);
+
+	n = ft_toupper('z');
+	printf("ft_toupper: %c\n", n);
+	n = toupper('z');
+	printf("toupper:    %c\n", n);
+
+	n = ft_toupper('D');
+	printf("ft_toupper: %c\n", n);
+	n = toupper('D');
+	printf("toupper:    %c\n", n);
+
+	n = ft_toupper(15);
+	printf("ft_toupper: %c\n", n);
+	n = toupper(15);
+	printf("toupper:    %c\n", n);
+
+	n = ft_toupper('/');
+	printf("ft_toupper: %c\n", n);
+	n = toupper('/');
+	printf("toupper:    %c\n", n);
+
+	n = ft_toupper(0);
+	printf("ft_toupper: %c\n", n);
+	n = toupper(0);
+	printf("toupper:    %c\n", n);
+
+	n = ft_toupper('{');
+	printf("ft_toupper: %c\n", n);
+	n = toupper('{');
+	printf("toupper:    %c\n", n);
+
+	n = ft_toupper(127);
+	printf("ft_toupper: %c\n", n);
+	n = toupper(127);
+	printf("toupper:    %c\n", n);
+
+	n = ft_toupper('@');
+	printf("ft_toupper: %c\n", n);
+	n = toupper('@');
+	printf("toupper:    %c\n", n);
+
+	return (0);
+}

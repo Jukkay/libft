@@ -1,0 +1,85 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    bonusmain.test                                     :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: jylimaul <jylimaul@student.hive.fi>        +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2021/11/17 14:01:55 by jylimaul          #+#    #+#              #
+#    Updated: 2021/11/18 11:37:26 by jylimaul         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+#include "libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	char s[] = "Test";
+	printf("Original:     %s\n", s);
+	ft_all_caps(s);
+	printf("ft_all_caps:  %s\n", s);
+	ft_all_lower(s);
+	printf("ft_all_lower: %s\n", s);
+
+	char s1[] = "TEST";
+	printf("Original:     %s\n", s1);
+	ft_all_caps(s1);
+	printf("ft_all_caps:  %s\n", s1);
+	ft_all_lower(s1);
+	printf("ft_all_lower: %s\n", s1);
+
+	char s2[] = "1test";
+	printf("Original:     %s\n", s2);
+	ft_all_caps(s2);
+	printf("ft_all_caps:  %s\n", s2);
+	ft_all_lower(s2);
+	printf("ft_all_lower: %s\n", s2);
+
+	char s3[] = "teSt23!%5aT";
+	printf("Original:     %s\n", s3);
+	ft_all_caps(s3);
+	printf("ft_all_caps:  %s\n", s3);
+	ft_all_lower(s3);
+	printf("ft_all_lower: %s\n", s3);
+	
+	printf("ft_intlen: %zu\n", ft_intlen(0));
+	printf("ft_power: %lld\n", ft_power(10, ft_intlen(0)));
+	printf("ft_intlen: %zu\n", ft_intlen(-9));
+	printf("ft_power: %lld\n", ft_power(10, ft_intlen(-9)));
+	printf("ft_intlen: %zu\n", ft_intlen(10));
+	printf("ft_power: %lld\n", ft_power(10, ft_intlen(10)));
+	printf("ft_intlen: %zu\n", ft_intlen(999));
+	printf("ft_power: %lld\n", ft_power(10, ft_intlen(999)));
+	printf("ft_intlen: %zu\n", ft_intlen(1000));
+	printf("ft_power: %lld\n", ft_power(10, ft_intlen(1000)));
+	printf("ft_intlen: %zu\n", ft_intlen(99999));
+	printf("ft_power: %lld\n", ft_power(10, ft_intlen(99999)));
+	printf("ft_intlen: %zu\n", ft_intlen(100000));
+	printf("ft_power: %lld\n", ft_power(10, ft_intlen(100000)));
+	printf("ft_intlen: %zu\n", ft_intlen(9999999));
+	printf("ft_power: %lld\n", ft_power(10, ft_intlen(9999999)));
+	printf("ft_intlen: %zu\n", ft_intlen(10000000));
+	printf("ft_power: %lld\n", ft_power(10, ft_intlen(10000000)));
+	printf("ft_intlen: %zu\n", ft_intlen(999999999));
+	printf("ft_power: %lld\n", ft_power(10, ft_intlen(999999999)));
+	printf("ft_intlen: %zu\n", ft_intlen(-999999999));
+	printf("ft_power: %lld\n", ft_power(10, ft_intlen(-999999999)));
+	printf("ft_intlen: %zu\n", ft_intlen(2147483647));
+	printf("ft_power: %lld\n", ft_power(10, ft_intlen(2147483647)));
+	printf("ft_intlen: %zu\n", ft_intlen(-2147483647 - 1));
+	printf("ft_power: %lld\n", ft_power(10, ft_intlen(2147483647 - 1)));
+	printf("ft_power: %lld\n", ft_power(2, 2));
+	printf("ft_power: %lld\n", ft_power(3, 2));
+	printf("ft_power: %lld\n", ft_power(2, 3));
+	printf("ft_power: %lld\n", ft_power(3, 3));
+	printf("ft_power: %lld\n", ft_power(5, 2));
+	printf("ft_power: %lld\n", ft_power(5, 3));
+	printf("ft_power: %lld\n", ft_power(-3, 3));
+	printf("ft_power: %lld\n", ft_power(5, -2));
+	printf("ft_power: %lld\n", ft_power(5, 0));
+	printf("ft_power: %lld\n", ft_power(-10, 21));
+	printf("ft_power: %lld\n", ft_power(10, 21));
+
+	return (0);
+}

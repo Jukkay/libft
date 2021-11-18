@@ -1,0 +1,62 @@
+
+#include "../libft.h"
+#include <stdio.h>
+#include <ctype.h>
+
+int	main(void)
+{
+	int	n;
+
+	write(1, "\n------------------ FT_ISPRINT ------------------\n\n", 51);
+	n = ft_isprint('	');
+	printf("ft_isprint: %d\n", n);
+	n = isprint('	');
+	printf("isprint:    %d\n", n);
+
+	n = ft_isprint('9');
+	printf("ft_isprint: %d\n", n);
+	n = isprint('9');
+	printf("isprint:    %d\n", n);
+
+	n = ft_isprint('\n');
+	printf("ft_isprint: %d\n", n);
+	n = isprint('\n');
+	printf("isprint:    %d\n", n);
+
+	n = ft_isprint('D');
+	printf("ft_isprint: %d\n", n);
+	n = isprint('D');
+	printf("isprint:    %d\n", n);
+
+	n = ft_isprint(15);
+	printf("ft_isprint: %d\n", n);
+	n = isprint(15);
+	printf("isprint:    %d\n", n);
+
+	n = ft_isprint('/');
+	printf("ft_isprint: %d\n", n);
+	n = isprint('/');
+	printf("isprint:    %d\n", n);
+
+	n = ft_isprint(0);
+	printf("ft_isprint: %d\n", n);
+	n = isprint(0);
+	printf("isprint:    %d\n", n);
+
+	n = ft_isprint('{');
+	printf("ft_isprint: %d\n", n);
+	n = isprint('{');
+	printf("isprint:    %d\n", n);
+
+	n = ft_isprint(127);
+	printf("ft_isprint: %d\n", n);
+	n = isprint(127);
+	printf("isprint:    %d\n", n);
+
+	n = ft_isprint('@');
+	printf("ft_isprint: %d\n", n);
+	n = isprint('@');
+	printf("isprint:    %d\n", n);
+
+	return (0);
+}

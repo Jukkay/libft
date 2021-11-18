@@ -1,0 +1,21 @@
+
+#include <stdio.h>
+#include "../libft.h"
+
+char	ft_oneforward(unsigned int i, char c)
+{
+	i++;
+	return (++c);
+}
+
+int	main(void)
+{
+	char	s[] = "abcdefghijkl";
+	char	*ret;
+
+	write(1, "\n------------------ FT_STRMAPI ------------------\n\n", 51);
+	ret = ft_strmapi(s, &ft_oneforward);
+	printf("Original %s\n", s);
+	printf("Modified %s\n", ret);
+	return (0);
+}

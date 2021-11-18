@@ -1,0 +1,62 @@
+
+#include "../libft.h"
+#include <stdio.h>
+#include <ctype.h>
+
+int	main(void)
+{
+	int	n;
+
+	write(1, "\n------------------ FT_TOLOWER ------------------\n\n", 51);
+	n = ft_tolower('A');
+	printf("ft_tolower: %c\n", n);
+	n = tolower('A');
+	printf("tolower:    %c\n", n);
+
+	n = ft_tolower('9');
+	printf("ft_tolower: %c\n", n);
+	n = tolower('9');
+	printf("tolower:    %c\n", n);
+
+	n = ft_tolower('Z');
+	printf("ft_tolower: %c\n", n);
+	n = tolower('Z');
+	printf("tolower:    %c\n", n);
+
+	n = ft_tolower('a');
+	printf("ft_tolower: %c\n", n);
+	n = tolower('a');
+	printf("tolower:    %c\n", n);
+
+	n = ft_tolower(15);
+	printf("ft_tolower: %c\n", n);
+	n = tolower(15);
+	printf("tolower:    %c\n", n);
+
+	n = ft_tolower('/');
+	printf("ft_tolower: %c\n", n);
+	n = tolower('/');
+	printf("tolower:    %c\n", n);
+
+	n = ft_tolower(0);
+	printf("ft_tolower: %c\n", n);
+	n = tolower(0);
+	printf("tolower:    %c\n", n);
+
+	n = ft_tolower('{');
+	printf("ft_tolower: %c\n", n);
+	n = tolower('{');
+	printf("tolower:    %c\n", n);
+
+	n = ft_tolower(2147483647);
+	printf("ft_tolower: %c\n", n);
+	n = tolower(2147483647);
+	printf("tolower:    %c\n", n);
+
+	n = ft_tolower('@');
+	printf("ft_tolower: %c\n", n);
+	n = tolower('@');
+	printf("tolower:    %c\n", n);
+
+	return (0);
+}

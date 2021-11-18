@@ -1,0 +1,23 @@
+
+#include "../libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	char	*str;
+
+	write(1, "\n------------------ FT_STRJOIN ------------------\n\n", 51);
+	str = ft_strjoin("asdfghjkl", "1234567890");
+	printf("%s\n", str);
+	str = ft_strjoin("asdfghjkl", "");
+	printf("%s\n", str);
+	str = ft_strjoin("", "1234567890");
+	printf("%s\n", str);
+	str = ft_strjoin("asdfghjkl ", "1234567890");
+	printf("%s\n", str);
+	str = ft_strjoin("asdfghjkl", " 1234567890");
+	printf("%s\n", str);
+	str = ft_strjoin("asdfghjkl", " ");
+	printf("%s\n", str);
+	return (0);
+}

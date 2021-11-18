@@ -1,0 +1,50 @@
+
+#include <stdio.h>
+#include "../libft.h"
+
+int	main(void)
+{
+	char	*diff;
+	char	dst1[] = "testtest";
+	char	dst2[] = "testtest";
+//	char	dst3[] = "testtest";
+	char	src[] = "xxxxxxxx";
+	size_t	n;
+
+	write(1, "\n------------------ FT_STRNCPY ------------------\n\n", 51);
+	n = 4;
+	(void)ft_strncpy(dst1, src, n);
+	printf("ft_strncpy: %s\n", dst1);
+	(void)strncpy(dst2, src, n);
+	printf("strncpy:    %s\n", dst2);
+
+	n = 29;
+	char *src1 = "";
+    char dst3[30];
+    char dst4[30];
+
+	diff = ft_strncpy(dst3, src1, n);
+	printf("ft_strncpy: %s\n", diff);
+	diff = strncpy(dst4, src1, n);
+	printf("strncpy:    %s\n", diff);
+	
+	char chararray[6];
+	char chararray2[6];
+	(void)strncpy(chararray, "abc", sizeof(chararray));
+	(void)ft_strncpy(chararray2, "abc", sizeof(chararray2));
+	printf("ft_strncpy  %s\n", chararray2);
+	printf("strncpy     %s\n", chararray);
+
+	char *src2 = "this is a string with a \0 inside";
+    char dst5[50];
+    char dst6[50];
+	n = 31;
+	ft_memset(dst5, 'B', sizeof(dst5));
+	ft_memset(dst6, 'B', sizeof(dst6));
+	(void)ft_strncpy(dst5, src2, sizeof(dst5));
+	(void)strncpy(dst6, src2, sizeof(dst6));
+	printf("ft_strncpy  %s\n", dst5);
+	printf("strncpy     %s\n", dst6);
+
+	return (0);
+}

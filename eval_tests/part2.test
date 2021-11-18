@@ -1,0 +1,6 @@
+./ft_toupper | cat -e
+./ft_tolower | cat -e
+./ft_memchr | cat -e
+./ft_strchr | cat -e
+./ft_strrchr | cat -e
+./ft_bzero | cat -e

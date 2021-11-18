@@ -1,0 +1,40 @@
+
+#include <stdio.h>
+#include "../libft.h"
+
+int	main(void)
+{
+	int	diff;
+	size_t	n;
+	
+	diff = 0;
+	n = 5;
+
+	write(1, "\n------------------ FT_MEMCMP ------------------\n\n", 50);
+	diff = ft_memcmp("", "", n);
+	printf("ft_memcmp: %d\n", diff);
+	diff = memcmp("", "", n);
+	printf("memcmp:    %d\n", diff);
+	
+	diff = ft_memcmp("asdf123", "asdf321", n);
+	printf("ft_memcmp: %d\n", diff);
+	diff = memcmp("asdf123", "asdf321", n);
+	printf("memcmp:    %d\n", diff);
+	
+	diff = ft_memcmp("aaaAa", "aaaAA", n);
+	printf("ft_memcmp: %d\n", diff);
+	diff = memcmp("aaaAa", "aaaAA", n);
+	printf("memcmp:    %d\n", diff);
+	
+	diff = ft_memcmp(" bAb ", " bab ", n);
+	printf("ft_memcmp: %d\n", diff);
+	diff = memcmp(" bAb ", " bab ", n);
+	printf("memcmp:    %d\n", diff);
+
+	diff = ft_memcmp("aww", "bpp", 0);
+	printf("ft_memcmp: %d\n", diff);
+	diff = memcmp("aww", "bpp", 0);
+	printf("memcmp:    %d\n", diff);
+
+	return (0);
+}

@@ -1,0 +1,22 @@
+
+#include "../libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	char	s1[] = "testing";
+	char	s2[] = "testing";
+	char	src[] = "xxxxxxx";
+	
+	write(1, "\n------------------ FT_MEMCPY ------------------\n\n", 50);
+	ft_memcpy(s1, src, 0);
+	printf("ft_memcpy:	%s\n", s1);
+	memcpy(s2, src, 0);
+	printf("memcpy:		%s\n", s2);
+
+	ft_memcpy(((void *)0), ((void *)0), 3);
+	printf("void test ok\n");
+	memcpy(((void *)0), ((void *)0), 3);
+	printf("void test ok\n");
+	return (0);
+}

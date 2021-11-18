@@ -1,0 +1,84 @@
+
+#include "../libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	char	s1[20] = "abcd";
+	char	s2[20] = "abcd";
+	size_t	ret;
+	size_t	n;
+
+	write(1, "\n------------------ FT_STRLCAT ------------------\n\n", 51);
+	n = 0;
+	ret = ft_strlcat(s1, "12345", n);
+	printf("ft_strlcat: %s	ret: %zu\n", s1, ret);
+	ret = strlcat(s2, "12345", n);
+	printf("strlcat:    %s	ret: %zu\n", s2, ret);
+	printf("dstsize: %zu\n", n);
+
+	n = 3;
+	ret = ft_strlcat(s1, "12345", n);
+	printf("ft_strlcat: %s	ret: %zu\n", s1, ret);
+	ret = strlcat(s2, "12345", n);
+	printf("strlcat:    %s	ret: %zu\n", s2, ret);
+	printf("dstsize: %zu\n", n);
+
+	n = 4;
+	ret = ft_strlcat(s1, "12345", n);
+	printf("ft_strlcat: %s	ret: %zu\n", s1, ret);
+	ret = strlcat(s2, "12345", n);
+	printf("strlcat:    %s	ret: %zu\n", s2, ret);
+	printf("dstsize: %zu\n", n);
+
+	n = 5;
+	ret = ft_strlcat(s1, "12345", n);
+	printf("ft_strlcat: %s	ret: %zu\n", s1, ret);
+	ret = strlcat(s2, "12345", n);
+	printf("strlcat:    %s	ret: %zu\n", s2, ret);
+	printf("dstsize: %zu\n", n);
+
+	n = 6;
+	ret = ft_strlcat(s1, "12345", n);
+	printf("ft_strlcat: %s	ret: %zu\n", s1, ret);
+	ret = strlcat(s2, "12345", n);
+	printf("strlcat:    %s	ret: %zu\n", s2, ret);
+	printf("dstsize: %zu\n", n);
+
+	n = 10;
+	ret = ft_strlcat(s1, "12345", n);
+	printf("ft_strlcat: %s	ret: %zu\n", s1, ret);
+	ret = strlcat(s2, "12345", n);
+	printf("strlcat:    %s	ret: %zu\n", s2, ret);
+	printf("dstsize: %zu\n", n);
+
+	char *dest;
+	char *dest2;
+	
+	dest = (char *)malloc(sizeof(*dest) * 15);
+	dest2 = (char *)malloc(sizeof(*dest) * 15);
+	
+	memset(dest, 0, 15);
+	memset(dest, 'r', 6);
+	memset(dest2, 0, 15);
+	memset(dest2, 'r', 6);
+	dest[14] = 'a';
+	dest2[14] = 'a';
+	n = 15;
+
+	ret = ft_strlcat(dest, "lorem ipsum dolor sit amet", n);
+	printf("ft_strlcat: %s	ret: %zu\n", dest, ret);
+	ret = strlcat(dest2, "lorem ipsum dolor sit amet", n);
+	printf("strlcat:    %s	ret: %zu\n", dest2, ret);
+	printf("dstsize: %zu\n", n);
+	
+	//char	s3[] = "abcd";
+	//char	s4[] = "abcd";
+	//n = 100;
+
+	//printf("strlcat:    %s	ret: %zu\n", s4, strlcat(s4, "12345", n));
+	//printf("ft_strlcat: %s	ret: %zu\n", s3, ft_strlcat(s3, "12345", n));
+	//printf("dstsize: %zu\n", n);
+
+	return (0);
+}

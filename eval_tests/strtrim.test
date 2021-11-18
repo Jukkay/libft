@@ -1,0 +1,27 @@
+
+#include "../libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	char	*ret;
+
+	write(1, "\n------------------ FT_STRTRIM ------------------\n\n", 51);
+	ret = ft_strtrim(" 	\nasdfghjkl\n	 ");
+	printf("%s\n", ret);
+	ret = ft_strtrim("			as dfg hj kl    \n");
+	printf("%s\n", ret);
+	ret = ft_strtrim("123 45678 90						");
+	printf("%s\n", ret);
+	ret = ft_strtrim("                     asdf	 ghjkl ");
+	printf("%s\n", ret);
+	ret = ft_strtrim("\n	asdf  ghj	kl 	");
+	printf("%s\n", ret);
+	ret = ft_strtrim(" a s d f g h j k l                           ");
+	printf("%s\n", ret);
+	ret = ft_strtrim("no whitespaces");
+	printf("%s\n", ret);
+	ret = ft_strtrim("  \t \t \n   \n\n\n\t");
+	printf("%s\n", ret);
+	return (0);
+}

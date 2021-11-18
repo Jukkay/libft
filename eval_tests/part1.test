@@ -1,0 +1,6 @@
+./ft_strlen | cat -e
+./ft_isalpha | cat -e 
+./ft_isdigit | cat -e 
+./ft_isalnum | cat -e 
+./ft_isascii | cat -e 
+./ft_isprint | cat -e

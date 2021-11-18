@@ -1,0 +1,41 @@
+
+#include <stdio.h>
+#include "../libft.h"
+
+int	main(void)
+{
+	char	*dup;
+
+	write(1, "\n------------------ FT_STRDUP ------------------\n\n", 50);
+	dup = ft_strdup("qwertyuiop");
+	printf("ft_strdup: %s\n", dup);
+	dup = strdup("qwertyuiop");
+	printf("strdup:    %s\n", dup);
+
+	dup = ft_strdup("qwerty");
+	printf("ft_strdup: %s\n", dup);
+	dup = strdup("qwerty");
+	printf("strdup:    %s\n", dup);
+	
+	dup = ft_strdup("1234567890");
+	printf("ft_strdup: %s\n", dup);
+	dup = strdup("1234567890");
+	printf("strdup:    %s\n", dup);
+	
+	dup = ft_strdup("asdfghjkl");
+	printf("ft_strdup: %s\n", dup);
+	dup = strdup("asdfghjkl");
+	printf("strdup:    %s\n", dup);
+	
+	dup = ft_strdup("!@#$%^&*()_+");
+	printf("ft_strdup: %s\n", dup);
+	dup = strdup("!@#$%^&*()_+");
+	printf("strdup:    %s\n", dup);
+	
+	dup = ft_strdup("qwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiop# end of string");
+	printf("ft_strdup: %s\n", dup);
+	dup = strdup("qwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiopqwertyuiop# end of string");
+	printf("strdup:    %s\n", dup);
+	
+	return (0);
+}

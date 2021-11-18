@@ -1,0 +1,20 @@
+
+#include <stdio.h>
+#include "../libft.h"
+
+void	ft_oneforward(unsigned int i, char *s)
+{
+	if (i == 0)
+		*s = '!';
+	else
+		*s = *s + 1;
+}
+int	main(void)
+{
+	char	s[] = "aaaaaaa";
+	write(1, "\n------------------ FT_STRITERI ------------------\n\n", 52);
+	printf("Original string: %s\n", s);
+	ft_striteri(s, &ft_oneforward);
+	printf("Modified string: %s\n", s);
+	return (0);
+}

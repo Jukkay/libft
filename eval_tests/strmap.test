@@ -1,0 +1,20 @@
+
+#include <stdio.h>
+#include "../libft.h"
+
+char	ft_oneforward(char c)
+{
+	return (++c);
+}
+
+int	main(void)
+{
+	char	s[] = "abcdefghijkl";
+	char	*ret;
+
+	write(1, "\n------------------ FT_STRMAP ------------------\n\n", 50);
+	ret = ft_strmap(s, &ft_oneforward);
+	printf("Original %s\n", s);
+	printf("Modified %s\n", ret);
+	return (0);
+}

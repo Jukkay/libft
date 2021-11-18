@@ -1,0 +1,34 @@
+
+#include "../libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	char	*str;
+	char	*str2;
+	int		c;
+	int		n;
+
+	write(1, "\n------------------ FT_MEMCHR ------------------\n\n", 50);
+	c = (int)'e';
+	n = 5;
+	str = ft_memchr("testing", c, n);
+	printf("ft_memchr: %s\n", str);
+	str2 = memchr("testing", c, n);
+	printf("memchr:    %s\n", str);
+
+	c = (int)'i';
+	n = 5;
+	str = ft_memchr("testing", c, n);
+	printf("ft_memchr: %s\n", str);
+	str2 = memchr("testing", c, n);
+	printf("memchr:    %s\n", str);
+
+	c = (int)' ';
+	n = 6;
+	str = ft_memchr("testi ng", c, n);
+	printf("ft_memchr: %s\n", str);
+	str2 = memchr("testi ng", c, n);
+	printf("memchr:    %s\n", str);
+	
+}

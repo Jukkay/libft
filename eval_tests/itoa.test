@@ -1,0 +1,119 @@
+
+#include <stdio.h>
+#include "../libft.h"
+
+int	main(void)
+{
+	int	n;
+
+	write(1, "\n------------------ FT_ITOA ------------------\n\n", 48);
+	n = 0;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 1;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = -1;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 9;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = -9;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 10;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 99;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = -99;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 100;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+	
+	n = -100;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 999;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 1000;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 9999;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 10000;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 99999;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 100000;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 999999;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 1000000;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 9999999;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 10000000;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 99999999;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 100000000;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 999999999;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 1000000000;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = (int)NULL;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = 2147483647;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	n = -2147483648;
+	printf("int:     	%d\n", n);
+	printf("ft_itoa: 	%s\n", ft_itoa(n));
+
+	return (0);
+}

@@ -1,0 +1,42 @@
+
+#include "../libft.h"
+#include <stdio.h>
+#include <ctype.h>
+
+int	main(void)
+{
+	int	n;
+
+	write(1, "\n------------------ FT_ISASCII ------------------\n\n", 51);
+	n = ft_isascii('0');
+	printf("ft_isascii: %d\n", n);
+	n = isascii('0');
+	printf("isascii:    %d\n", n);
+
+	n = ft_isascii('9');
+	printf("ft_isascii: %d\n", n);
+	n = isascii('9');
+	printf("isascii:    %d\n", n);
+
+	n = ft_isascii('a');
+	printf("ft_isascii: %d\n", n);
+	n = isascii('a');
+	printf("isascii:    %d\n", n);
+
+	n = ft_isascii(0x80);
+	printf("ft_isascii: %d\n", n);
+	n = isascii(0x80);
+	printf("isascii:    %d\n", n);
+
+	n = ft_isascii(0x7f);
+	printf("ft_isascii: %d\n", n);
+	n = isascii(0x7f);
+	printf("isascii:    %d\n", n);
+
+	n = ft_isascii('/');
+	printf("ft_isascii: %d\n", n);
+	n = isascii('/');
+	printf("isascii:    %d\n", n);
+
+	return (0);
+}

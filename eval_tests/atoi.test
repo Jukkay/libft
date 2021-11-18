@@ -1,0 +1,72 @@
+
+#include <stdio.h>
+#include "../libft.h"
+
+int main (void)
+{
+	write(1, "\n------------------ FT_ATOI ------------------\n\n", 48);
+	printf("ft_atoi: %d\n", ft_atoi("    +9  "));
+	printf("atoi:    %d\n", atoi("    +9  "));
+
+	printf("ft_atoi: %d\n", ft_atoi("\t\v\f\r\n \f-06050"));
+	printf("atoi:    %d\n", atoi("\t\v\f\r\n \f-06050"));
+
+	printf("ft_atoi: %d\n", ft_atoi(" "));
+	printf("atoi:    %d\n", atoi(" "));
+
+	printf("ft_atoi: %d\n", ft_atoi("--9"));
+	printf("atoi:    %d\n", atoi("--9"));
+	
+	printf("ft_atoi: %d\n", ft_atoi("aagagg++9"));
+	printf("atoi:    %d\n", atoi("aagagg++9"));
+
+	printf("ft_atoi: %d\n", ft_atoi("   aagagg++9  "));
+	printf("atoi:    %d\n", atoi("   aagagg++9  "));
+	
+	printf("ft_atoi: %d\n", ft_atoi("  -9"));
+	printf("atoi:    %d\n", atoi("  -9"));
+	
+	printf("ft_atoi: %d\n", ft_atoi("- 9"));
+	printf("atoi:    %d\n", atoi("- 9"));
+	
+	printf("ft_atoi: %d\n", ft_atoi("  +    1234"));
+	printf("atoi:    %d\n", atoi("  +    1234"));
+
+	printf("ft_atoi: %d\n", ft_atoi("      +1234"));
+	printf("atoi:    %d\n", atoi("      +1234"));
+
+	printf("ft_atoi: %d\n", ft_atoi("+ 9"));
+	printf("atoi:    %d\n", atoi("+ 9"));
+
+	printf("ft_atoi: %d\n", ft_atoi("2147483647"));
+	printf("atoi:    %d\n", atoi("2147483647"));
+
+	printf("ft_atoi: %d\n", ft_atoi("-2147483648"));
+	printf("atoi:    %d\n", atoi("-2147483648"));
+
+	printf("ft_atoi: %d\n", ft_atoi(""));
+	printf("atoi:    %d\n", atoi(""));
+
+	printf("ft_atoi: %d\n", ft_atoi("1234f5678"));
+	printf("atoi:    %d\n", atoi("1234f5678"));
+
+	printf("ft_atoi: %d\n", ft_atoi("1234+5678"));
+	printf("atoi:    %d\n", atoi("1234+5678"));
+
+	printf("ft_atoi: %d\n", ft_atoi("4294967295"));
+	printf("atoi:    %d\n", atoi("4294967295"));
+
+	printf("ft_atoi: %d\n", ft_atoi("−9223372036854775808"));
+	printf("atoi:    %d\n", atoi("−9223372036854775808"));
+
+	printf("ft_atoi: %d\n", ft_atoi("9223372036854775807"));
+	printf("atoi:    %d\n", atoi("9223372036854775807"));
+
+	printf("ft_atoi: %d\n", ft_atoi("18446744073709551615"));
+	printf("atoi:    %d\n", atoi("18446744073709551615"));
+
+	//printf("Next should segfault:\n");
+	//printf("ft_atoi: %d\n", ft_atoi(NULL));
+	//printf("atoi:    %d\n", atoi(NULL));
+	return (0);
+}

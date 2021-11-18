@@ -1,0 +1,41 @@
+
+#include "../libft.h"
+#include <stdio.h>
+#include <ctype.h>
+
+int	main(void)
+{
+	int	n;
+	write(1, "\n------------------ FT_ISDIGIT ------------------\n\n", 51);
+	n = ft_isdigit('0');
+	printf("ft_isdigit: %d\n", n);
+	n = isdigit('0');
+	printf("isdigit:    %d\n", n);
+
+	n = ft_isdigit('9');
+	printf("ft_isdigit: %d\n", n);
+	n = isdigit('9');
+	printf("isdigit:    %d\n", n);
+
+	n = ft_isdigit('1');
+	printf("ft_isdigit: %d\n", n);
+	n = isdigit('1');
+	printf("isdigit:    %d\n", n);
+
+	n = ft_isdigit('5');
+	printf("ft_isdigit: %d\n", n);
+	n = isdigit('5');
+	printf("isdigit:    %d\n", n);
+
+	n = ft_isdigit('*');
+	printf("ft_isdigit: %d\n", n);
+	n = isdigit('*');
+	printf("isdigit:    %d\n", n);
+
+	n = ft_isdigit('/');
+	printf("ft_isdigit: %d\n", n);
+	n = isdigit('/');
+	printf("isdigit:    %d\n", n);
+
+	return (0);
+}

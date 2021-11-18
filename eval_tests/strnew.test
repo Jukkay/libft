@@ -1,0 +1,56 @@
+
+#include <unistd.h>
+#include "../libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	char	*str;
+	size_t	size;
+	size_t	i;
+
+	write(1, "\n------------------ FT_STRNEW ------------------\n\n", 50);
+	size = 4;
+	i = 0;
+	printf("Size of new string: %zu\n", size);
+	str = ft_strnew(size);
+	while (i < size)
+	{
+		if (str[i] == '\0')
+			printf("nullbyte\n");
+		if (str[i] != '\0')
+		{
+			printf("not nullbyte: %c\n", str[i]);
+		}
+		i++;
+	}
+	size = 0;
+	printf("Size of new string: %zu\n", size);
+	i = 0;
+	str = ft_strnew(size);
+	while (i < size)
+	{
+		if (str[i] == '\0')
+			printf("nullbyte\n");
+		if (str[i] != '\0')
+		{
+			printf("not nullbyte: %c\n", str[i]);
+		}
+		i++;
+	}
+	size = 1;
+	printf("Size of new string: %zu\n", size);
+	i = 0;
+	str = ft_strnew(size);
+	while (i < size)
+	{
+		if (str[i] == '\0')
+			printf("nullbyte\n");
+		if (str[i] != '\0')
+		{
+			printf("not nullbyte: %c\n", str[i]);
+		}
+		i++;
+	}
+	return (0);
+}

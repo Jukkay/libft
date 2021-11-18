@@ -1,0 +1,26 @@
+
+#include "../libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	char	*str;
+
+	write(1, "\n------------------ FT_STRSUB ------------------\n\n", 50);
+	write(1, "Original string: \"test_string_1234abcd!!! ##*&^%$%\"\n", 52);
+	str = ft_strsub("test_string_1234abcd!!! ##*&^%$%", 0, 4);
+	printf("%s\n", str);
+	str = ft_strsub("test_string_1234abcd!!! ##*&^%$%", 0, 32);
+	printf("%s\n", str);
+	str = ft_strsub("test_string_1234abcd!!! ##*&^%$%", 5, 6);
+	printf("%s\n", str);
+	str = ft_strsub("test_string_1234abcd!!! ##*&^%$%", 12, 8);
+	printf("%s\n", str);
+	str = ft_strsub("test_string_1234abcd!!! ##*&^%$%", 24, 8);
+	printf("%s\n", str);
+	str = ft_strsub("test_string_1234abcd!!! ##*&^%$%", 4, 8);
+	printf("%s\n", str);
+	str = ft_strsub("test_string_1234abcd!!! ##*&^%$%", 20, 3);
+	printf("%s\n", str);
+	return (0);
+}

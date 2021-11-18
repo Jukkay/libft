@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+#include "../libft.h"
+
+int	main(void)
+{
+	int	diff;
+
+	const char a[] = "aaaa";
+	const char b[] = "zzzz";
+	char *c = "asd";
+	char *d = "das";
+
+	diff = 0;
+
+	write(1, "\n------------------ FT_STRCMP ------------------\n\n", 50);
+	printf("ft_strcmp:	%d\n", ft_strcmp(" asdf", "asdf "));
+	printf("strcmp:		%d\n", strcmp(" asdf", "asdf "));
+	printf("ft_strcmp:	%d\n", ft_strcmp("aaa", "aaaa"));
+	printf("strcmp:		%d\n", strcmp("aaa", "aaaa"));
+	printf("ft_strcmp:	%d\n", ft_strcmp("bbbb", "bbb"));
+	printf("strcmp:		%d\n", strcmp("bbbb", "bbb"));
+	printf("ft_strcmp:	%d\n", ft_strcmp("bbbb", "aaaa"));
+	printf("strcmp:		%d\n", strcmp("bbbb", "aaaa"));
+	printf("ft_strcmp:	%d\n", ft_strcmp("aAa", "aAa"));
+	printf("strcmp:		%d\n", strcmp("aAa", "aAa"));
+	printf("ft_strcmp:	%d\n", ft_strcmp(a, b));
+	printf("strcmp:		%d\n", strcmp(a, b));	
+	printf("ft_strcmp:	%d\n", ft_strcmp(c, d));
+	printf("strcmp:		%d\n", strcmp(c, d));	
+}

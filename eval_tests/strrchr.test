@@ -1,0 +1,66 @@
+
+#include "../libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	int	c;
+	char *ptr;
+
+	write(1, "\n------------------ FT_STRRCHR ------------------\n\n", 51);
+	c = '*';
+	ptr = ft_strrchr("abcdefghijklmnopqrstuvwxyz", c);
+	printf("ft_strrchr: %s\n", ptr);
+	ptr = strrchr("abcdefghijklmnopqrstuvwxyz", c);
+	printf("strrchr:    %s\n", ptr);
+	
+	c = 'a';
+	ptr = ft_strrchr("abcdefghijklmnopqrstuvwxyz", c);
+	printf("ft_strrchr: %s\n", ptr);
+	ptr = strrchr("abcdefghijklmnopqrstuvwxyz", c);
+	printf("strrchr:    %s\n", ptr);
+	
+	c = 'f';
+	ptr = ft_strrchr("abcdefghijklmnopqrstuvwxyz", c);
+	printf("ft_strrchr: %s\n", ptr);
+	ptr = strrchr("abcdefghijklmnopqrstuvwxyz", c);
+	printf("strrchr:    %s\n", ptr);
+
+	c = 'p';
+	ptr = ft_strrchr("abcdefghijklmnopqrstuvwxyz", c);
+	printf("ft_strrchr: %s\n", ptr);
+	ptr = strrchr("abcdefghijklmnopqrstuvwxyz", c);
+	printf("strrchr:    %s\n", ptr);
+
+	c = 'z';
+	ptr = ft_strrchr("abcdefghijklmnopqrstuvwxyz", c);
+	printf("ft_strrchr: %s\n", ptr);
+	ptr = strrchr("abcdefghijklmnopqrstuvwxyz", c);
+	printf("strrchr:    %s\n", ptr);
+
+	c = '\0';
+	ptr = ft_strrchr("abcdefghijklmnopqrstuvwxyz", c);
+	printf("ft_strrchr: %s\n", ptr);
+	ptr = strrchr("abcdefghijklmnopqrstuvwxyz", c);
+	printf("strrchr:    %s\n", ptr);
+
+	c = 'z';
+	ptr = ft_strrchr("", c);
+	printf("ft_strrchr: %s\n", ptr);
+	ptr = strrchr("", c);
+	printf("strrchr:    %s\n", ptr);
+
+	c = '\0';
+	ptr = ft_strrchr("", c);
+	printf("ft_strrchr: %s\n", ptr);
+	ptr = strrchr("", c);
+	printf("strrchr:    %s\n", ptr);
+
+	c = 'c';
+	ptr = ft_strrchr("aabbccaabbccaabbccaabbccaa", c);
+	printf("ft_strrchr: %s\n", ptr);
+	ptr = strrchr("aabbccaabbccaabbccaabbccaa", c);
+	printf("strrchr:    %s\n", ptr);
+
+	return (0);
+}

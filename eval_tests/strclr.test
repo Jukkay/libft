@@ -1,0 +1,17 @@
+
+#include <stdio.h>
+#include "../libft.h"
+
+int	main(void)
+{
+	char	s[] = "testing";
+	int	i;
+
+	write(1, "\n------------------ FT_STRCLR ------------------\n\n", 50);
+	i = 0;
+	printf("%s\n", s);
+	ft_strclr(s);
+	printf("%s\n", s);
+
+	return (0);
+}

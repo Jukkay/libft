@@ -1,0 +1,40 @@
+
+#include <stdio.h>
+#include "../libft.h"
+
+int	main(void)
+{
+	size_t	size;
+
+	write(1, "\n------------------ FT_STRLEN ------------------\n\n", 50);
+	size = ft_strlen("");
+	printf("ft_strlen:	%zu\n", size);
+	size = strlen("");
+	printf("strlen:		%zu\n", size);
+	size = ft_strlen("1");
+	printf("ft_strlen:	%zu\n", size);
+	size = strlen("1");
+	printf("strlen:		%zu\n", size);
+	size = ft_strlen("12");
+	printf("ft_strlen:	%zu\n", size);
+	size = strlen("12");
+	printf("strlen:		%zu\n", size);
+	size = ft_strlen("123");
+	printf("ft_strlen:	%zu\n", size);
+	size = strlen("123");
+	printf("strlen:		%zu\n", size);
+	size = ft_strlen("1234");
+	printf("ft_strlen:	%zu\n", size);
+	size = strlen("1234");
+	printf("strlen:		%zu\n", size);
+	size = ft_strlen("12345");
+	printf("ft_strlen:	%zu\n", size);
+	size = strlen("12345");
+	printf("strlen:		%zu\n", size);
+	size = ft_strlen("123456789999999999921 ");
+	printf("ft_strlen:	%zu\n", size);
+	size = strlen("123456789999999999921 ");
+	printf("strlen:		%zu\n", size);
+
+	return (0);
+}

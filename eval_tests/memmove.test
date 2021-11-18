@@ -1,0 +1,49 @@
+
+#include "../libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	char	s1[] = "testing";
+	char	s2[] = "testing";
+	char	*src1;
+	char	*src2;
+	char	src[] = "xxxxxxx";
+	int		n;
+
+	src1 = &s1[3];
+	src2 = &s2[3];
+
+	write(1, "\n------------------ FT_MEMMOVE ------------------\n\n", 51);
+	n = 7;
+	ft_memmove(s1, src1, n);
+	printf("ft_memmove: %s\n", s1);
+	memmove(s2, src2, n);
+	printf("memmove:    %s\n", s2);
+
+	n = 1;
+	ft_memmove(s1, src, n);
+	printf("ft_memmove: %s\n", s1);
+	memmove(s2, src, n);
+	printf("memmove:    %s\n", s2);
+
+	n = 4;
+	ft_memmove(s1, src, n);
+	printf("ft_memmove: %s\n", s1);
+	memmove(s2, src, n);
+	printf("memmove:    %s\n", s2);
+
+	n = 7;
+	ft_memmove(s1, src, n);
+	printf("ft_memmove: %s\n", s1);
+	memmove(s2, src, n);
+	printf("memmove:    %s\n", s2);
+
+	n = 8;
+	ft_memmove(s1, src, n);
+	printf("ft_memmove: %s\n", s1);
+	memmove(s2, src, n);
+	printf("memmove:    %s\n", s2);
+
+	return (0);
+}

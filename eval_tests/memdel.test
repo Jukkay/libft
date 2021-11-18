@@ -1,0 +1,18 @@
+
+#include "../libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	char	*c = "test";
+
+	write(1, "\n------------------ FT_MEMDEL ------------------\n\n", 50);
+	printf("%s\n", c);
+	c = (char *)malloc(sizeof(char) * 5);
+	if (!c)
+		return (0);
+	printf("%s\n", c);
+	ft_memdel((void *)&c);
+	printf("%s\n", c);
+	return (0);
+}

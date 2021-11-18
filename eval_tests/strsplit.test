@@ -1,0 +1,117 @@
+
+#include "../libft.h"
+#include <stdio.h>
+
+int	main(void)
+{
+	char **arr;
+	int	i;
+	char *str = NULL;
+
+	write(1, "\n------------------ FT_STRSPLIT ------------------\n\n", 52);
+	i = 0;
+	printf("Original string: 1 first*2*3*4*5*6****7 last********\ndelimiter: '*'\n");
+	arr = ft_strsplit("1 first*2*3*4*5*6****7 last********", '*');
+	while (arr && arr[i] != NULL)
+	{
+		printf("%s\n", arr[i]);
+		i++;
+	}
+	free(arr);
+	printf("-------------\n");
+
+	i = 0;
+	printf("Original string: *123 first**1234*12345****123456 last****\ndelimiter: '*'\n");
+	arr = ft_strsplit("*123 first**1234*12345****123456 last****", '*');
+	while (arr && arr[i] != NULL)
+	{
+		printf("%s\n", arr[i]);
+		i++;
+	}
+	free(arr);
+	printf("-------------\n");
+
+	i = 0;
+	printf("Original string: test1 first*test2**test3***test4****test5 last\ndelimiter: '*'\n");
+	arr = ft_strsplit("test1 first*test2**test3***test4****test5 last", '*');
+	while (arr && arr[i] != NULL)
+	{
+		printf("%s\n", arr[i]);
+		i++;
+	}
+	free(arr);
+	printf("-------------\n");
+
+	i = 0;
+	printf("Original string: ********1 first*2*3*4*5*6****7 last\ndelimiter: '*'\n");
+	arr = ft_strsplit("********1 first*2*3*4*5*6****7 last", '*');
+	while (arr && arr[i] != NULL)
+	{
+		printf("%s\n", arr[i]);
+		i++;
+	}
+	free(arr);
+	printf("-------------\n");
+
+	i = 0;
+	printf("Original string:       split       this for   me  !       \ndelimiter: ' '\n");
+	arr = ft_strsplit("      split       this for   me  !", ' ');
+	while (arr && arr[i] != NULL)
+	{
+		printf("%s\n", arr[i]);
+		i++;
+	}
+	free(arr);
+	printf("-------------\n");
+
+	i = 0;
+	printf("Original string: \\0split\\0\\0\\0\\0this\\0for\\0\\0\\0\\0\\0\\0\\0\\0me\\0\\0!\\0\ndelimiter: '\\0'\n");
+	arr = ft_strsplit("\0split\0\0\0\0this\0for\0\0\0\0\0\0\0\0me\0\0!\0", '\0');
+	while (arr && arr[i] != NULL)
+	{
+		printf("%s\n", arr[i]);
+		i++;
+	}
+	free(arr);
+	printf("nullbyte input OK\n");
+	printf("-------------\n");
+
+	i = 0;
+	printf("Original string: %s\ndelimiter: ' '\n", str);
+	arr = ft_strsplit(str, ' ');
+	while (arr && arr[i] != NULL)
+	{
+		printf("%s\n", arr[i]);
+		i++;
+	}
+	free(arr);
+	printf("nullpointer input OK\n");
+	printf("-------------\n");
+	
+	char *s = "      split       this for   me  !       ";
+	i = 0;
+	printf("Original string: %s\ndelimiter: ' '\n", s);
+	arr = ft_strsplit(s, ' ');
+	while (arr && arr[i] != NULL)
+	{
+		printf("%s\n", arr[i]);
+		i++;
+	}
+	free(arr);
+	printf("test OK\n");
+	printf("-------------\n");
+
+	i = 0;
+	printf("Original string: %s\ndelimiter: '\\0'\n", str);
+	arr = ft_strsplit(str, '\0');
+	while (arr && arr[i] != NULL)
+	{
+		printf("%s\n", arr[i]);
+		i++;
+	}
+	free(arr);
+	printf("nullpointer + nullbyte input OK\n");
+	printf("-------------\n");
+
+	return (0);
+}

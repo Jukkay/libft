@@ -1,0 +1,7 @@
+./ft_memcpy | cat -e
+./ft_strcpy | cat -e
+./ft_strcat | cat -e
+./ft_strcmp | cat -e
+./ft_strstr | cat -e
+./ft_memmove | cat -e
+./ft_memcmp | cat -e

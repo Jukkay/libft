@@ -1,0 +1,52 @@
+
+#include <stdio.h>
+#include "../libft.h"
+
+int	main(void)
+{
+	int	diff;
+	
+	write(1, "\n------------------ FT_STREQU ------------------\n\n", 50);
+	diff = ft_strequ("asdf", "asdf");
+	if(diff)
+		write(1, "OK\n", 3);
+	else
+		write(1, "FAIL\n", 5);
+	
+	diff = ft_strequ("aaa", "aaaa");
+	if(!diff)
+		write(1, "OK\n", 3);
+	else
+		write(1, "FAIL\n", 5);
+	
+	diff = ft_strequ("bbbbb", "bbbb");
+	if(!diff)
+		write(1, "OK\n", 3);
+	else
+		write(1, "FAIL\n", 5);
+	
+	diff = ft_strequ("bbbb", "aaaa");
+	if(!diff)
+		write(1, "OK\n", 3);
+	else
+		write(1, "FAIL\n", 5);
+
+	diff = ft_strequ("aAa", "aAa");
+	if(diff)
+		write(1, "OK\n", 3);
+	else
+		write(1, "FAIL\n", 5);
+
+	diff = ft_strequ("ededeqdf", "");
+	if(!diff)
+		write(1, "OK\n", 3);
+	else
+		write(1, "FAIL\n", 5);
+
+	diff = ft_strequ("", "ededeqdf");
+	if(!diff)
+		write(1, "OK\n", 3);
+	else
+		write(1, "FAIL\n", 5);
+	return (0);
+}
