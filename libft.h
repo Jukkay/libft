@@ -6,7 +6,7 @@
 /*   By: jylimaul <jylimaul@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 11:12:10 by jylimaul          #+#    #+#             */
-/*   Updated: 2021/11/18 12:03:09 by jylimaul         ###   ########.fr       */
+/*   Updated: 2021/11/18 16:12:37 by jylimaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,4 +97,7 @@ void		ft_all_caps(char *s);
 void		ft_all_lower(char *s);
 size_t		ft_intlen(int n);
 long long	ft_power(int n, int power);
+int			ft_find_next_end(char const *s, char c);
+int			ft_count_chunks(char const *s, char c);
+
 #endif

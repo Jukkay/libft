@@ -6,7 +6,7 @@
 #    By: jylimaul <jylimaul@student.hive.fi>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/29 16:28:15 by jylimaul          #+#    #+#              #
-#    Updated: 2021/11/18 13:54:03 by jylimaul         ###   ########.fr        #
+#    Updated: 2021/11/18 16:12:28 by jylimaul         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ ft_strncmp.o ft_atoi.o ft_isalpha.o ft_isdigit.o ft_isalnum.o ft_isascii.o ft_is
 ft_memalloc.o ft_memdel.o ft_strnew.o ft_strdel.o ft_strclr.o ft_striter.o ft_striteri.o ft_strmap.o ft_strmapi.o \
 ft_strequ.o ft_strnequ.o ft_strsub.o ft_strjoin.o ft_strtrim.o ft_strsplit.o ft_itoa.o ft_putchar.o ft_putstr.o ft_putendl.o \
 ft_putnbr.o ft_putchar_fd.o ft_putstr_fd.o ft_putendl_fd.o ft_putnbr_fd.o ft_iswhitespace.o ft_lstnew.o ft_lstdelone.o ft_lstdel.o \
-ft_lstadd.o ft_lstiter.o ft_lstmap.o ft_all_caps.o ft_all_lower.o ft_intlen.o ft_power.o
+ft_lstadd.o ft_lstiter.o ft_lstmap.o ft_all_caps.o ft_all_lower.o ft_intlen.o ft_power.o ft_count_chunks.o ft_find_next_end.o
 
 FLAGS = -c -Wall -Wextra -Werror
 
@@ -224,6 +224,12 @@ ft_intlen.o:
 
 ft_power.o:
 	gcc ${FLAGS} ft_power.c
+
+ft_count_chunks.o:
+	gcc ${FLAGS} ft_count_chunks.c
+
+ft_find_next_end.o:
+	gcc ${FLAGS} ft_find_next_end.c
 
 clean:
 	rm -f ${HEADERS}
