@@ -6,15 +6,12 @@
 /*   By: jylimaul <jylimaul@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 10:13:45 by jylimaul          #+#    #+#             */
-/*   Updated: 2021/11/11 10:14:48 by jylimaul         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:50:24 by jylimaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_iswhitespace(char c)
 {
-	if (c == ' ' || c == '\t' || c == '\v')
-		return (1);
-	else if (c == '\f' || c == '\r' || c == '\n')
-		return (1);
-	return (0);
+	return (c == ' ' || c == '\t' || c == '\v' || c == '\f' || c == '\r' \
+	|| c == '\n');
 }

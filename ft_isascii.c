@@ -6,14 +6,11 @@
 /*   By: jylimaul <jylimaul@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 18:55:06 by jylimaul          #+#    #+#             */
-/*   Updated: 2021/11/05 18:55:08 by jylimaul         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:45:34 by jylimaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isascii(int c)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	else
-		return (0);
+	return (c >= 0 && c <= 127);
 }

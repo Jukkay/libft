@@ -6,52 +6,41 @@
 /*   By: jylimaul <jylimaul@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 13:07:18 by jylimaul          #+#    #+#             */
-/*   Updated: 2021/11/18 13:30:29 by jylimaul         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:14:12 by jylimaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	int_to_char(int n, int fd)
+static void	int_to_char(unsigned int nb, unsigned int divider, int fd)
 {
-	int		divider;
-	int		temp;
-	char	print_ch;
+	unsigned int	temp;
 
-	divider = ft_power(10, ft_intlen(n)) / 10;
-	while (divider >= 1)
-	{
-		temp = n / divider;
-		n %= divider;
-		divider /= 10;
-		print_ch = temp + '0';
-		ft_putchar_fd(print_ch, fd);
-	}
+	if (!divider)
+		return ;
+	temp = nb / divider;
+	ft_putchar_fd(temp + '0', fd);
+	int_to_char(nb % divider, divider / 10, fd);
 }
 
 void	ft_putnbr_fd(int n, int fd)
 {
+	unsigned int	nb;
+
 	if (n < 0)
 	{
-		if (n == -2147483648)
-		{
-			ft_putchar_fd('-', fd);
-			ft_putchar_fd('2', fd);
-			n = 147483648;
-			int_to_char(n, fd);
-		}
+		nb = (unsigned int)(n * (-1));
+		ft_putchar_fd('-', fd);
+		if (nb < 10)
+			ft_putchar_fd(nb + '0', fd);
 		else
-		{
-			ft_putchar_fd('-', fd);
-			n *= (-1);
-			if (n < 10)
-				ft_putchar_fd(n + '0', fd);
-			else
-				int_to_char(n, fd);
-		}
+			int_to_char(nb, ft_power(10, ft_intlen(nb)) / 10, fd);
 	}
 	else if (n <= 9)
 		ft_putchar_fd(n + '0', fd);
 	else
-		int_to_char(n, fd);
+	{
+		nb = (unsigned int)(n);
+		int_to_char(n, ft_power(10, ft_intlen(nb)) / 10, fd);
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: jylimaul <jylimaul@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 12:55:40 by jylimaul          #+#    #+#             */
-/*   Updated: 2021/11/17 13:42:40 by jylimaul         ###   ########.fr       */
+/*   Updated: 2021/11/19 10:12:00 by jylimaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,8 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	size_t	len;
-
 	if (!s)
 		return ;
-	len = ft_strlen(s);
-	write(fd, s, len);
+	write(fd, s, ft_strlen(s));
 	write(fd, "\n", 1);
 }

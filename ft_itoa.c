@@ -6,53 +6,38 @@
 /*   By: jylimaul <jylimaul@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 14:50:03 by jylimaul          #+#    #+#             */
-/*   Updated: 2021/11/18 11:45:38 by jylimaul         ###   ########.fr       */
+/*   Updated: 2021/11/19 12:56:31 by jylimaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static void	ft_int_to_str(int n, char *s, int i)
+static void	ft_int_to_str(unsigned int nb, unsigned int divider, char *s)
 {
-	int		divider;
-	int		temp;
-
-	divider = ft_power(10, ft_intlen(n)) / 10;
-	while (divider)
+	if (!divider)
 	{
-		temp = n / divider;
-		n %= divider;
-		divider /= 10;
-		s[i] = temp + '0';
-		i++;
+		*s = '\0';
+		return ;
 	}
-	s[i] = '\0';
+	*s = nb / divider + '0';
+	ft_int_to_str(nb % divider, divider / 10, s + 1);
 }
 
-static void	ft_itoa_negatives(int n, char *s, int i)
+static void	ft_itoa_negatives(int n, char *s)
 {
-	if (n == -2147483648)
-	{
-		s[i++] = '-';
-		s[i++] = '2';
-		n = 147483648;
-		ft_int_to_str(n, s, i);
-	}
-	else
-	{
-		s[i++] = '-';
-		n *= (-1);
-		ft_int_to_str(n, s, i);
-	}
+	unsigned int	nb;
+
+	*s = '-';
+	nb = (unsigned int)n * (-1);
+	ft_int_to_str(nb, ft_power(10, ft_intlen(nb)) / 10, s + 1);
 }
 
 char	*ft_itoa(int n)
 {
-	char	*s;
-	int		i;
-	size_t	len;
+	char			*s;
+	size_t			len;
+	unsigned int	divider;
 
-	i = 0;
 	len = ft_intlen(n);
 	if (n == 0)
 		return (ft_strsub("0", 0, 1));
@@ -61,14 +46,15 @@ char	*ft_itoa(int n)
 		s = (char *)malloc(sizeof(char) * len + 2);
 		if (!s)
 			return (NULL);
-		ft_itoa_negatives(n, s, i);
+		ft_itoa_negatives(n, s);
 	}
 	else
 	{
 		s = (char *)malloc(sizeof(char) * len + 1);
 		if (!s)
 			return (NULL);
-		ft_int_to_str(n, s, i);
+		divider = ft_power(10, len) / 10;
+		ft_int_to_str((unsigned int)n, divider, s);
 	}
 	return (s);
 }

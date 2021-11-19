@@ -6,16 +6,12 @@
 /*   By: jylimaul <jylimaul@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/05 18:43:33 by jylimaul          #+#    #+#             */
-/*   Updated: 2021/11/05 18:51:45 by jylimaul         ###   ########.fr       */
+/*   Updated: 2021/11/19 11:42:48 by jylimaul         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalnum(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	else if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
+	return ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z') \
+	|| (c >= '0' && c <= '9'));
 }
